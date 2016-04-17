@@ -3,17 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.mapfre.fwo</groupId>
-		<artifactId>fwo-service</artifactId>
+		<artifactId>fwo-service-client</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>fwo-service-client-boot</artifactId>
 	<name>fwo-service-client-boot: </name>
 
 	<dependencies>
-		<dependency>
-			<artifactId>fwo-service-api</artifactId>
-			<groupId>com.mapfre.fwo</groupId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>

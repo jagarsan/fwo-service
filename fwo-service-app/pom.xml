@@ -7,38 +7,18 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>fwo-service-app</artifactId>
-	<name>fwo-service-app: Aplicación de servicio de framework de operaciones</name>
+	<packaging>pom</packaging>
+	<name>fwo-service-app: Aplicaciones de servicio de framework de operaciones</name>
+	<modules>
+		<module>fwo-service-app-base</module>
+		<module>fwo-service-app-shared</module>
+		<module>fwo-service-app-gaia</module>
+		<module>fwo-service-app-all</module>
+	</modules>
 	<dependencies>
 		<dependency>
 			<artifactId>fwo-service-api</artifactId>
 			<groupId>com.mapfre.fwo</groupId>
-		</dependency>
-		<dependency>
-			<groupId>com.mapfre.fwo</groupId>
-			<artifactId>fwo-service-shared</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.mapfre.fwo</groupId>
-			<artifactId>fwo-service-gaia</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency> 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-		<!-- Swagger -->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.wordnik</groupId>
-			<artifactId>swagger-jaxrs_2.10</artifactId>
-			<version>1.3.12</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -46,6 +26,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.mapfre.fwo.service.FwoServiceApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

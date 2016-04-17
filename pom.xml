@@ -12,12 +12,10 @@
 	<packaging>pom</packaging>
 	<name>fwo-service: Servicio de framework de operaciones</name>
 	<modules>
-		<module>fwo-service-shared</module>
-		<module>fwo-service-gaia</module>
-		<module>fwo-service-app</module>
 		<module>fwo-service-api</module>
-		<module>fwo-service-client-boot</module>
-		<module>fwo-service-client-jersey</module>
+		<module>fwo-service-impl</module>
+		<module>fwo-service-app</module>
+		<module>fwo-service-client</module>
 	</modules>
 	<properties>
 		<java.version>1.7</java.version>
@@ -31,6 +29,11 @@
 		<dependencies>
 			<dependency>
 				<artifactId>fwo-service-api</artifactId>
+				<groupId>com.mapfre.fwo</groupId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<artifactId>fwo-service-impl</artifactId>
 				<groupId>com.mapfre.fwo</groupId>
 				<version>${project.version}</version>
 			</dependency>
@@ -50,18 +53,34 @@
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
+				<artifactId>fwo-service-app-base</artifactId>
+				<groupId>com.mapfre.fwo</groupId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<artifactId>fwo-service-app-gaia</artifactId>
+				<groupId>com.mapfre.fwo</groupId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<artifactId>fwo-service-app-all</artifactId>
+				<groupId>com.mapfre.fwo</groupId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>com.mapfre.fwo</groupId>
 				<artifactId>fwo-cim-model</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
+			<!-- Swagger -->
 			<dependency>
 				<groupId>io.springfox</groupId>
-				<artifactId>springfox-swagger-ui</artifactId>
+				<artifactId>springfox-swagger2</artifactId>
 				<version>2.2.2</version>
 			</dependency>
 			<dependency>
 				<groupId>io.springfox</groupId>
-				<artifactId>springfox-swagger2</artifactId>
+				<artifactId>springfox-swagger-ui</artifactId>
 				<version>2.2.2</version>
 			</dependency>
 		</dependencies>

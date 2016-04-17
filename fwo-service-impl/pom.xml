@@ -6,8 +6,13 @@
 		<artifactId>fwo-service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>fwo-service-gaia</artifactId>
-	<name>fwo-service-gaia: Servicios de Gaia para framework de operaciones</name>
+	<artifactId>fwo-service-impl</artifactId>
+	<packaging>pom</packaging>
+	<name>fwo-service-impl: Implementaciones de servicios de framework de operaciones</name>
+	<modules>
+		<module>fwo-service-gaia</module>
+		<module>fwo-service-shared</module>
+	</modules>
 	<dependencies>
 		<dependency>
 			<artifactId>fwo-service-api</artifactId>

@@ -1,39 +1,40 @@
 package com.mapfre.fwo.service;
 
-
-import static springfox.documentation.builders.PathSelectors.regex;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication
+/**
+ * Swagger configuration and ui application
+ * @author jagarcia
+ *
+ */
 @EnableSwagger2
-@ComponentScan
-public class FwoServiceApplication {
-
+@Configuration
+public class SwaggerConfig {
 	
-	public static void main(String[] args) {
-		SpringApplication.run(FwoServiceApplication.class, args);
-	}
-
+	/**
+	 * @return fwo-service for docket configuration
+	 */
     @Bean
-    public Docket newsApi() {
+    public Docket fwoApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("fwo-service")
                 .apiInfo(apiInfo())
                 .select()
-                .paths(regex("/(shared|gaia)/.*"))
+                .paths(PathSelectors.any())
                 .build();
     }
 
+    /**
+     * @return the metadata for the API
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("FWO REST Service API Sample")
@@ -42,5 +43,4 @@ public class FwoServiceApplication {
                 .version("0.0.1-SNAPSHOT")
                 .build();
     }
-	
 }

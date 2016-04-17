@@ -3,15 +3,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.mapfre.fwo</groupId>
-		<artifactId>fwo-service</artifactId>
+		<artifactId>fwo-service-app</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>fwo-service-shared</artifactId>
-	<name>fwo-service-shared: Servicios comunes de Framework de operaciones</name>
+	<artifactId>fwo-service-app-gaia</artifactId>
+	<name>fwo-service-app-gaia: Aplicación de servicio Gaia de framework de operaciones</name>
 	<dependencies>
 		<dependency>
-			<artifactId>fwo-service-api</artifactId>
 			<groupId>com.mapfre.fwo</groupId>
+			<artifactId>fwo-service-app-base</artifactId>
+		</dependency> 
+		<dependency>
+			<groupId>com.mapfre.fwo</groupId>
+			<artifactId>fwo-service-gaia</artifactId>
 		</dependency>
 	</dependencies>
 </project>

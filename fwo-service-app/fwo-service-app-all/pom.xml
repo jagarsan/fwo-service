@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.mapfre.fwo</groupId>
+		<artifactId>fwo-service-app</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>fwo-service-app-all</artifactId>
+	<name>fwo-service-app-all: Aplicación de servicios de framework de operaciones</name>
+	<dependencies>
+		<dependency>
+			<groupId>com.mapfre.fwo</groupId>
+			<artifactId>fwo-service-app-base</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.mapfre.fwo</groupId>
+			<artifactId>fwo-service-shared</artifactId>
+		</dependency> 
+		<dependency>
+			<groupId>com.mapfre.fwo</groupId>
+			<artifactId>fwo-service-gaia</artifactId>
+		</dependency>
+	</dependencies>
+</project>
