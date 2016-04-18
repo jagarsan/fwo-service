@@ -11,6 +11,7 @@
 	<name>fwo-service-app: Aplicaciones de servicio de framework de operaciones</name>
 	<modules>
 		<module>fwo-service-app-base</module>
+		<module>fwo-service-app-front</module>
 		<module>fwo-service-app-shared</module>
 		<module>fwo-service-app-gaia</module>
 		<module>fwo-service-app-all</module>
